@@ -20,7 +20,7 @@ Vehicle.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        carModel: {
+        vehicleModel: {
             type: DataTypes.STRING,
             allowNull: false,
         },
