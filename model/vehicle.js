@@ -10,7 +10,7 @@ class Vehicle extends Model {
 
 Vehicle.init(
     {
-        id: {
+        vehicleId: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
