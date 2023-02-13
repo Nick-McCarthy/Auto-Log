@@ -40,4 +40,28 @@ router.get('/login', async (req, res) => {
     }
 });
 
+router.get('/signup', async (req, res) => {
+    try {
+        res.render('signup');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/vehicledetails', async (req, res) => {
+    try {
+        res.render('vehicleDetails');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/vehicleform', async (req, res) => {
+    try {
+        res.render('vehicleForm');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
