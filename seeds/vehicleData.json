@@ -1,0 +1,27 @@
+[
+    {
+      "make": "hyundai",
+      "model": "santa fai",
+      "year": "2014",
+      "milage": "100000",
+      "vin": "wesd14245",
+      "color": "blue"
+    },
+    {
+        "make": "honda",
+        "model": "civic",
+        "year": "2019",
+        "milage": "25000",
+        "vin": "sdfa3451dsg",
+        "color": "green"
+      },
+      {
+        "make": "ford",
+        "model": "camry",
+        "year": "2010",
+        "milage": "120,000",
+        "vin": "asdf22343r",
+        "color": "black"
+      }
+  ]
+  
