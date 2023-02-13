@@ -5,8 +5,7 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
     try {
-        console.log('homeRoutes hit')
-        res.render('index')
+        res.render('homepage')
         /*const userData = await User.findAll({
             attributes: { exclude: ['password'] },
             order: [['name', 'ASC']],
@@ -19,7 +18,6 @@ router.get('/', async (req, res) => {
             logged_in: req.session.logged_in,
         });*/
     } catch (err) {
-        console.log('homeRoutes Error Catch')
         res.status(500).json(err);
     }
 });
