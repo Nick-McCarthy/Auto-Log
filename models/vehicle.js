@@ -10,7 +10,7 @@ class Vehicle extends Model {
 
 Vehicle.init(
     {
-        vehicleId: {
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -20,12 +20,24 @@ Vehicle.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        vehicleModel: {
+        model: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        year: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        color: {
             type: DataTypes.STRING,
             allowNull: false,
         },
         mileage: {
             type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        vin: {
+            type: DataTypes.STRING,
             allowNull: false,
         },
     },
@@ -34,7 +46,7 @@ Vehicle.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'vehicle',
     }
 );
 

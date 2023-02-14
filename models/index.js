@@ -2,11 +2,11 @@ const User = require('./user');
 const Vehicle = require('./vehicle');
 
 Vehicle.belongsTo(User, {
-    foreignKey: 'vehicleId',
+    foreignKey: 'vehicle_id',
 });
 
 User.hasMany(Vehicle, {
-    foreignKey: 'userId',
+    foreignKey: 'user_id',
 });
 
 module.exports = { User, Vehicle };
