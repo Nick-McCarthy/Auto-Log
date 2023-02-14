@@ -8,41 +8,25 @@
     </div>
 </section>
 
-<div class="card">
-    <div class="vehicle">
-        <p>MAKE - MODEL</p>
-    </div>
-    <div class="container">
-        <p>Year</p>
-        <p>Mileage</p>
-        <p>Vin#</p>
-        <p>Log Count</p>
-    </div>
-</div>
+{{#if vehicles.length}}
+<div>
+    <h3>Saved Vehicles:</h3>
 
-<div class="card">
-    <div class="vehicle">
-        <p>MAKE - MODEL</p>
+    {{#each vehicles as |vehicle|}}
+    <div class="card">
+        <div class="vehicle">
+            <p>{{make}} - {{model}}</p>
+        </div>
+        <div class="container">
+            <p>{{year}}</p>
+            <p>{{mileage}}</p>
+            <p>{{vin}}</p>
+            <p>{{logCount}}</p>
+        </div>
     </div>
-    <div class="container">
-        <p>Year</p>
-        <p>Mileage</p>
-        <p>Vin#</p>
-        <p>Log Count</p>
-    </div>
+    {{/each}}
 </div>
-
-<div class="card">
-    <div class="vehicle">
-        <p>MAKE - MODEL</p>
-    </div>
-    <div class="container">
-        <p>Year</p>
-        <p>Mileage</p>
-        <p>Vin#</p>
-        <p>Log Count</p>
-    </div>
-</div>
+{{/if}}
 
 <div>
     <a href='/vehicleform'><input type="submit" value="Add New Vehicle"></a>
