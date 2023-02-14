@@ -2,7 +2,7 @@
 
 [Link to deployed page](!LINK!)
 
-Version 0.4
+Version 0.5
 
 Deployment Date: 2/14/2023
 
@@ -21,8 +21,7 @@ AutoLog is a website that allows the user to track their vehicle maintenance his
 
 - User login to store information
 - User vehicle tracker
-- Vehicle service records/history
-- Storing and displaying all previous maintenance history
+- Vehicle service records/history displayed in log form
 
 
 ## Getting Started
@@ -36,10 +35,12 @@ tutorial goes here
 
 **[sequelize](https://sequelize.org/)**
 
+**[handlebars](https://handlebarsjs.com/)**
+
+**[bcrypt](https://www.npmjs.com/package/bcrypt)**
 
 
-## Lessons Learned 
-need to fill
 
-## Live Site 
-need to fill
+## Development
+
+Figma was used for the [wireframe](https://drive.google.com/file/d/1QDXKDZciil1BbEgsD9Bzzi-zeKnFGvpQ/view?usp=sharing).
