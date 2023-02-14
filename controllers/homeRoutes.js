@@ -11,15 +11,49 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/login', withAuth, (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/homepage');
-        return;
-    }
+
+
+router.get('/login', (req, res) => {
+    /* if (req.session.logged_in) {
+         res.redirect('/homepage');
+         return;
+     }*/
     res.render('login');
 });
+/*
+router.post('/login', async (req, res) => {
+    try {
+        const userData = await User.findOne({ where: { email: req.body.email } });
 
-router.get('/homepage', withAuth, async (req, res) => {
+        if (!userData) {
+            res
+                .status(400)
+                .json({ message: 'Incorrect email or password, please try again' });
+            return;
+        }
+
+        const validPassword = await userData.checkPassword(req.body.password);
+
+        if (!validPassword) {
+            res
+                .status(400)
+                .json({ message: 'Incorrect email or password, please try again' });
+            return;
+        }
+
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+
+            res.json({ user: userData, message: 'You are now logged in!' });
+        });
+
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});*/
+
+router.get('/homepage', async (req, res) => {
     try {
         res.render('homepage');
     } catch (err) {
@@ -27,7 +61,7 @@ router.get('/homepage', withAuth, async (req, res) => {
     }
 });
 
-router.get('/vehicledetails', withAuth, async (req, res) => {
+router.get('/vehicledetails', async (req, res) => {
     try {
         res.render('vehicleDetails');
     } catch (err) {
