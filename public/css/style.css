@@ -84,15 +84,9 @@ input[type=submit]:hover {
   width: 30%;
   margin: 20px;
   padding: 0px;
-  display:inline-flex;
+  display: block;
   flex-direction: column;
   background-color: #1E1E1E;
-  cursor: pointer;
-  /* box-shadow: 0 3px 10px 0 #3A6BEB; */
-}
-
-.card:hover {
-  box-shadow: 0 10px 12px 0 #3A6BEB
 }
 
 .vehicle {
@@ -104,14 +98,4 @@ input[type=submit]:hover {
 
 .container {
   padding: 2px 16px;
-
 }
-
-
-
-
-
-
-
-
-
