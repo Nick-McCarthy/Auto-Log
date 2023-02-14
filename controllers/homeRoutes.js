@@ -1,52 +1,33 @@
 const router = require('express').Router();
-//const { User } = require('../models');
-//const withAuth = require('../utils/auth');
+const { User } = require('../models');
+const withAuth = require('../utils/auth');
 
 
 router.get('/', async (req, res) => {
     try {
-        res.render('homepage')
-        /*const userData = await User.findAll({
-            attributes: { exclude: ['password'] },
-            order: [['name', 'ASC']],
-        });
-
-        const users = userData.map((project) => project.get({ plain: true }));
-
-        res.render('homepage', {
-            users,
-            logged_in: req.session.logged_in,
-        });*/
+        res.render('signup')
     } catch (err) {
         res.status(500).json(err);
     }
 });
-/*
-router.get('/login', (req, res) => {
+
+router.get('/login', withAuth, (req, res) => {
     if (req.session.logged_in) {
-        res.redirect('/');
+        res.redirect('/homepage');
         return;
     }
     res.render('login');
 });
-*/
-router.get('/login', async (req, res) => {
+
+router.get('/homepage', withAuth, async (req, res) => {
     try {
-        res.render('login');
+        res.render('homepage');
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-router.get('/signup', async (req, res) => {
-    try {
-        res.render('signup');
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-router.get('/vehicledetails', async (req, res) => {
+router.get('/vehicledetails', withAuth, async (req, res) => {
     try {
         res.render('vehicleDetails');
     } catch (err) {

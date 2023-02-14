@@ -1,3 +1,7 @@
+const sequelize = require('../config/connection');
+const { User, Vehicle } = require('../models');
+
+
 const userData = require('./userData.json');
 const vehicleData = require('./vehicleData.json');
 
