@@ -10,7 +10,6 @@ Deployment Date: 2/14/2023
 * **Nick McCarthy** - [GitHub](https://github.com/Nick-McCarthy)
 * **Wiley Vincent** - [GitHub](https://github.com/WileyVincent)
 * **Khevin Brahmbhatt** - [GitHub](https://github.com/khevb27)
-* **Trevor Nava** - [GitHub](https://github.com/Trevor-Nava)
 
 ## Purpose
 
