@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Project extends Model { }
 
 Project.init(
   {
@@ -11,21 +11,29 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    make: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
-    description: {
+    model: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+    year: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
+    color: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    mileage: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    vin: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,

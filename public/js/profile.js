@@ -1,14 +1,17 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+  const make = document.querySelector('#vehicle-make').value.trim();
+  const model = document.querySelector('#vehicle-model').value.trim();
+  const year = document.querySelector('#vehicle-year').value.trim();
+  const color = document.querySelector('#vehicle-color').value.trim();
+  const mileage = document.querySelector('#vehicle-mileage').value.trim();
+  const vin = document.querySelector('#vehicle-vin').value.trim();
 
-  if (name && needed_funding && description) {
+  if (make && model && year && color && mileage && vin) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
+      body: JSON.stringify({ make, model, year, color, mileage, vin }),
       headers: {
         'Content-Type': 'application/json',
       },
