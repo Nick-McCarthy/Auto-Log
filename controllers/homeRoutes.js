@@ -28,18 +28,19 @@ router.get('/', async (req, res) => {
 });
 //edits here
 router.get('/project/:id', async (req, res) => {
+  console.log('homeRoutes.js line 31');
   try {
     const projectData = await Project.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['name', 'make', 'model'],
+          attributes: ['name'],
         },
       ],
     });
-
+    console.log(projectData);
     const project = projectData.get({ plain: true });
-
+    console.log(project);
     res.render('project', {
       ...project,
       logged_in: req.session.logged_in
