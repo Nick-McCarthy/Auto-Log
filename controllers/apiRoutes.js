@@ -1,21 +1,10 @@
 const router = require('express').Router();
 const { User } = require('../models');
-const withAuth = require('../utils/auth');
-
-
-router.get('/', async (req, res) => {
-    try {
-        res.render('signup')
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
 
 router.post('/signup', async (req, res) => {
     try {
         console.log(req.body);
         const userData = await User.create(req.body);
-
         /*req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
@@ -26,14 +15,6 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-router.get('/login', (req, res) => {
-    /* if (req.session.logged_in) {
-         res.redirect('/homepage');
-         return;
-     }*/
-    res.render('login');
-});
-/*
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });
@@ -45,7 +26,7 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        const validPassword = await userData.checkPassword(req.body.password);
+        const validPassword = await userData.checkPassword(req.body.user_password);
 
         if (!validPassword) {
             res
@@ -55,7 +36,7 @@ router.post('/login', async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.user_id = userData.id;
+            req.session.id = userData.id;
             req.session.logged_in = true;
 
             res.json({ user: userData, message: 'You are now logged in!' });
@@ -63,30 +44,6 @@ router.post('/login', async (req, res) => {
 
     } catch (err) {
         res.status(400).json(err);
-    }
-});*/
-
-router.get('/homepage', withAuth, async (req, res) => {
-    try {
-        res.render('homepage');
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-router.get('/vehicledetails', async (req, res) => {
-    try {
-        res.render('vehicleDetails');
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-router.get('/vehicleform', async (req, res) => {
-    try {
-        res.render('vehicleForm');
-    } catch (err) {
-        res.status(500).json(err);
     }
 });
 
