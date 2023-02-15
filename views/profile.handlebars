@@ -1,14 +1,32 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Logged in as: {{name}}</h2>
   </div>
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Add A Vehicle:</h3>
+  
 
-    <form class="form new-project-form">
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>My Vehicles:</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a style ="color: red;" href="/project/{{project.id}}">{{project.make}}</a> <a style ="color: red;" href="/project/{{project.id}}">{{project.model}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">X</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+  <div style="float: right;" class="col-md-6">
+    <h3>Add New Vehicle:</h3>
+
+    <form  class="form new-project-form">
       <div class="form-group">
         <label for="vehicle-make">Make:</label>
         <input class="form-input" type="text" id="vehicle-make" name="vehicle-make" />
@@ -34,27 +52,10 @@
         <input class="form-input" type="text" id="vehicle-vin" name="vehicle-vin" />
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Add Vehicle</button>
       </div>
     </form>
   </div>
-
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.make}}</a> <a href="/project/{{project.id}}">{{project.model}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
 </div>
 
 <script src="./js/profile.js"></script>
