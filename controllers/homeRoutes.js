@@ -11,7 +11,20 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.post('/signup', async (req, res) => {
+    try {
+        console.log(req.body);
+        const userData = await User.create(req.body);
 
+        /*req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+        });*/
+        res.status(200).json(userData);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
 
 router.get('/login', (req, res) => {
     /* if (req.session.logged_in) {
@@ -53,7 +66,7 @@ router.post('/login', async (req, res) => {
     }
 });*/
 
-router.get('/homepage', async (req, res) => {
+router.get('/homepage', withAuth, async (req, res) => {
     try {
         res.render('homepage');
     } catch (err) {
