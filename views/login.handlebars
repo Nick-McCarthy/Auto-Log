@@ -1,20 +1,42 @@
-<section>
-    <div class="login-box">
-        <h3>Log in with AUTOLOG</h3>
-        <form class = 'login-form'>
-            <input type="text" placeholder="Enter Email Address" id="email-login" />
-            <input type="text" placeholder="Enter Password" id="password-login" />
-            <button type="submit" value="Log In">Log In</button>
-        </form>
-        <h4>
-            <span style="color:#3A6BEB">Forgot Password?</span>
-        </h4>
-    </div>
+<div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
 
-</section>
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
 
-<h4>
-    <span style="color:white">Don't have an account?</span>
-    <span style="color:#3A6BEB"><a href='/signup'>Create Account</a></span>
-</h4>
-<script src="/js/login.js"></script>
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./js/login.js"></script>

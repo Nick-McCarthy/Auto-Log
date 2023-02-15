@@ -1,18 +1,17 @@
 [
-    {
-      "username": "Nick",
-      "email": "nick@fakemail.com",
-      "user_password": "12345asdf"
-    },
-    {
-      "username": "Khevin",
-      "email": "khevin@fakemail.com",
-      "user_password": "12345asdf"
-    },
-    {
-      "username": "Wiley",
-      "email": "wiley@fakemail.com",
-      "user_password": "12345asdf"
-    }
-  ]
-  
+  {
+    "name": "Sal",
+    "email": "sal@hotmail.com",
+    "password": "123456789"
+  },
+  {
+    "name": "Lernantino",
+    "email": "lernantino@gmail.com",
+    "password": "123456789"
+  },
+  {
+    "name": "Amiko",
+    "email": "amiko2k20@aol.com",
+    "password": "123456789"
+  }
+]
