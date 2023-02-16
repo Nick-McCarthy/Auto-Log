@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Logged in as: {{name}}</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  
+
+  {{#if vehicles.length}}
+  <div class="col-md-6 project-list">
+    <h3>My Vehicles:</h3>
+
+    {{#each vehicles as |vehicle|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a style ="color: red;" href="/vehicle/{{vehicle.id}}">{{vehicle.make}}</a> <a style ="color: red;" href="/vehicle/{{vehicle.id}}">{{vehicle.model}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{vehicle.id}}">X</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+  <div style="float: right;" class="col-md-6">
+    <h3>Add New Vehicle:</h3>
+
+    <form  class="form new-project-form">
+      <div class="form-group">
+        <label for="vehicle-make">Make:</label>
+        <input class="form-input" type="text" id="vehicle-make" name="vehicle-make" />
+      </div>
+      <div class="form-group">
+        <label for="vehicle-model">Model:</label>
+        <input class="form-input" type="text" id="vehicle-model" name="vehicle-model" />
+      </div>
+      <div class="form-group">
+        <label for="vehicle-year">Year:</label>
+        <input class="form-input" type="text" id="vehicle-year" name="vehicle-year" />
+      </div>
+      <div class="form-group">
+        <label for="vehicle-color">Color:</label>
+        <input class="form-input" type="text" id="vehicle-color" name="vehicle-color" />
+      </div>
+      <div class="form-group">
+        <label for="vehicle-mileage">Mileage:</label>
+        <input class="form-input" type="text" id="vehicle-mileage" name="vehicle-mileage" />
+      </div>
+      <div class="form-group">
+        <label for="vehicle-vin">VIN:</label>
+        <input class="form-input" type="text" id="vehicle-vin" name="vehicle-vin" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add Vehicle</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./js/profile.js"></script>
