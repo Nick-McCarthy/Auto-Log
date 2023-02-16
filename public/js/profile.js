@@ -9,7 +9,7 @@ const newFormHandler = async (event) => {
   const vin = document.querySelector('#vehicle-vin').value.trim();
 
   if (make && model && year && color && mileage && vin) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/vehicles`, {
       method: 'POST',
       body: JSON.stringify({ make, model, year, color, mileage, vin }),
       headers: {
@@ -20,7 +20,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create project');
+      alert('Failed to create vehicle');
     }
   }
 };
@@ -29,14 +29,14 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/vehicles/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete project');
+      alert('Failed to delete vehicle');
     }
   }
 };

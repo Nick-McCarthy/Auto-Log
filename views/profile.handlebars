@@ -7,17 +7,17 @@
 <div class="row mt-4">
   
 
-  {{#if projects.length}}
+  {{#if vehicles.length}}
   <div class="col-md-6 project-list">
     <h3>My Vehicles:</h3>
 
-    {{#each projects as |project|}}
+    {{#each vehicles as |vehicle|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a style ="color: red;" href="/project/{{project.id}}">{{project.make}}</a> <a style ="color: red;" href="/project/{{project.id}}">{{project.model}}</a></h4>
+        <h4><a style ="color: red;" href="/vehicle/{{vehicle.id}}">{{vehicle.make}}</a> <a style ="color: red;" href="/vehicle/{{vehicle.id}}">{{vehicle.model}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">X</button>
+        <button class="btn btn-sm btn-danger" data-id="{{vehicle.id}}">X</button>
       </div>
     </div>
     {{/each}}

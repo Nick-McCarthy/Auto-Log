@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Vehicle, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
+    const vehicleData = await Vehicle.findAll({
       include: [
         {
           model: User,
@@ -15,11 +15,11 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const vehicles = vehicleData.map((vehicle) => vehicle.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
-      projects,
+      vehicles,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -27,10 +27,10 @@ router.get('/', async (req, res) => {
   }
 });
 //edits here
-router.get('/project/:id', async (req, res) => {
+router.get('/vehicle/:id', async (req, res) => {
   console.log('homeRoutes.js line 31');
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const vehicleData = await Vehicle.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -38,11 +38,11 @@ router.get('/project/:id', async (req, res) => {
         },
       ],
     });
-    console.log(projectData);
-    const project = projectData.get({ plain: true });
-    console.log(project);
-    res.render('project', {
-      ...project,
+    console.log(vehicleData);
+    const vehicle = vehicleData.get({ plain: true });
+    console.log(vehicle);
+    res.render('vehicle', {
+      ...vehicle,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -56,7 +56,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Vehicle }],
     });
 
     const user = userData.get({ plain: true });
