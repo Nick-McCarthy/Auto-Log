@@ -2,9 +2,9 @@
 
 [Link to deployed page](https://auto-log.herokuapp.com/)
 
-Version 0.5
+Version 2.1
 
-Deployment Date: 2/14/2023
+Deployment Date: 2/17/2023
 
 ### Contributors:
 * **Nick McCarthy** - [GitHub](https://github.com/Nick-McCarthy)
@@ -24,7 +24,30 @@ AutoLog is a website that allows the user to track their vehicle maintenance his
 
 
 ## Getting Started
-tutorial goes here
+
+1. Navigate to [AutoLog](https://auto-log.herokuapp.com/) in a browser.
+
+2. Click "login" in the top right to either login or signup.
+<p align="left">
+  <img src="public/assets/images/AutoLogTut01.png" alt="image of landing screen"/>
+</p>
+
+3. After logging in, you will be greeted with a form to enter vehicle info. You can use the form to save details about specific vehicles to your account. Enter desired info and click "Add Vehicle" to save to your account.
+<p align="left">
+  <img src="public/assets/images/AutoLogTut03.png" alt="image of landing screen"/>
+</p>
+
+4. If you have any saved vehicles they will show up on the left. Click on the vehicle you would like to inspect.
+<p align="left">
+  <img src="public/assets/images/AutoLogTut04.png" alt="image of landing screen"/>
+</p>
+
+5. After clicking on a vehicle, you will be taken to the details page for that vehicle. At the bottom of this page is a form where you can add entries for service/maintenance history.
+<p align="left">
+  <img src="public/assets/images/AutoLogTut05.png" alt="image of landing screen"/>
+</p>
+
+6. Click "Home" in the top right to return to your vehicle dashboard at any time (while logged in).
 
 
 ## Built Using
