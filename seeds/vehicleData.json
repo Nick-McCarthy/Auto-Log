@@ -1,0 +1,26 @@
+[
+  {
+    "make": "honda",
+    "model": "civic",
+    "year": "2001",
+    "color": "green",
+    "mileage": "75000",
+    "vin": "79682345"
+  },
+  {
+    "make": "toyota",
+    "model": "camry",
+    "year": "1990",
+    "color": "red",
+    "mileage": "90000",
+    "vin": "46357689"
+  },
+  {
+    "make": "hyundai",
+    "model": "santa fai",
+    "year": "2010",
+    "color": "blue",
+    "mileage": "100000",
+    "vin": "123459786"
+  }
+]

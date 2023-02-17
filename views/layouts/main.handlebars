@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,3 +43,48 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUTO LOG</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body style="background-color: rgb(53, 51, 51);">
+  <div style="background-color: rgb(53, 51, 51); color: white;" class="flex-column justify-space-around">
+    <header style = "background-color: black;" class="display-flex justify-space-between align-center p-2">
+      <h1 style="align-text: center;">
+        <a href="/"><img height="90" width="325" src="../assets/images/AutoLog.png"></a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a class = "yes-button" href="/profile">Home</a> |
+        <button class="no-button" id="logout">Logout</button>
+        {{else}}
+        <a class = "yes-button" href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
+>>>>>>> 58fe0de4a8e010ca013808c27dd458f5579bf47a

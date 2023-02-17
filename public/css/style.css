@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
@@ -22,3 +23,42 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+=======
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.no-button {
+  margin: 7px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f44336;
+  color: white;
+  font-size: 100%;
+}
+
+.no-button:hover {
+
+  background-color: white;
+  color: #f44336;
+}
+
+.yes-button {
+  margin: 7px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f44336;
+  color: white;
+  font-size: 100%;
+}
+
+.yes-button:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #f44336;
+}
+>>>>>>> 58fe0de4a8e010ca013808c27dd458f5579bf47a
