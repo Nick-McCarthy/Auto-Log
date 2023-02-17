@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-[
-  {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "123456789"
-  },
-  {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "123456789"
-  },
-  {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "123456789"
-  }
-]
-=======
 [
   {
     "name": "Khev",
@@ -34,4 +15,3 @@
     "password": "123456789"
   }
 ]
->>>>>>> 58fe0de4a8e010ca013808c27dd458f5579bf47a
