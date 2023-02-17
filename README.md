@@ -1,6 +1,6 @@
 # AutoLog
 
-[Link to deployed page](!LINK!)
+[Link to deployed page](https://auto-log.herokuapp.com/)
 
 Version 0.5
 
